@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1719231680 source:c:\users\snnzd\onedrive\masaüstü\codeblock\dac8052lib\main.c
+	<stdio.h>
+	<stdint.h>
+	<stdbool.h>
+	"dac80502.h"
+
+1719231511 c:\users\snnzd\onedrive\masaüstü\codeblock\dac8052lib\dac80502.h
+	<stdint.h>
+	<stdbool.h>
+
+1719231693 source:c:\users\snnzd\onedrive\masaüstü\codeblock\dac8052lib\dac80502.c
+	"dac80502.h"
+
