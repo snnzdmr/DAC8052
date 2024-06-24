@@ -4,23 +4,6 @@
 #include "dac80502.h"
 
 
-#define NOOP			 0x00
-#define DEVID			 0x01
-#define SYNC			 0x02
-#define CONFIG			 0x03
-#define GAIN			 0x04
-#define TRIGGER			 0x05
-#define BRDCAST			 0x06
-#define STATUS			 0x07
-#define DACADATA		 0x08
-#define DACBDATA		 0x09
-
-#define TRIGGER_LDAC                        0x10
-#define SOFT_RESET                          0x0A
-
-#define DAC80502_SLAVE_ADDRESS              0x48
-
-
 bool I2C_WriteRegister_16(uint8_t regAddress,uint16_t txData);
 bool I2C_ReadRegister_16(uint8_t regAddress,uint16_t *RxBuffer);
 
