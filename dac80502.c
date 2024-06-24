@@ -68,10 +68,10 @@ DAC_RESPONSE DAC80502_getStatus(uint16_t *status){
 DAC_RESPONSE DAC80502_setClearBit(uint8_t regAddress,uint8_t bitIndex,bool bitState){
     DAC_RESPONSE retVal = ERROR;
     uint16_t rxBuffer;
-    bool i2cResponse = I2C_ReadRegister_16(regAddress,&rxBuffer);
+    bool i2cResponse = gParams->i2c.i2cReadReg(regAddress,&rxBuffer);
     if(i2cResponse){
         rxBuffer = setWriteValue(bitState,rxBuffer,bitIndex);
-        i2cResponse = I2C_WriteRegister_16(regAddress,rxBuffer);
+        i2cResponse = gParams->i2c.i2cWriteReg(regAddress,rxBuffer);
         if(i2cResponse){
             retVal = OK;
         }
